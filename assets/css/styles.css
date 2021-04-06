@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+
+
+/* === about === */
+
+
+:root {
+    --header-height: 3rem;
+    /* === colors === */
+    --base-color: #036bfc;
+    --base-color-darker: #0d4ea8;
+    --base-color-darkest: #022e6b;
+    --base-color-white: #FCF8F8;
+
+    /* === font === */
+    --body-font: 'Nanum Gothic', sans-serif;
+    --big-font-size: 2.5rem;
+    --normal-font-size: 1.5rem;
+    --small-font-size: .938rem;
+
+    /* === z-index === */
+    --z-fixed: 100;
+}
+
+@media screen and (min-width : 768px) {
+    :root {
+        --big-font-size: 5rem;
+        --normal-font-size: 3rem;
+        --small-font-size: 1.5rem;
+    }
+}
+
+/* === BASE === */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+    padding: 0;
+}
+
+h1,
+p,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* === LAYOUT === */
+.__header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--base-color);
+}
+
+/* === NAV === */
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__open,
+.nav__close,
+.nav__link {
+    color: var(--base-color-white);
+}
+
+@media screen and (max-width :768px) {
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        height: 100%;
+        padding: 3.5rem 1.5rem 0;
+        background-color: rgba(3, 107, 252, .4);
+        backdrop-filter: blur(10px);
+        transition: .5s;
+    }
+}
+
+.nav__item {
+    margin-bottom: 1.5rem;
+}
+
+.nav__open {
+    font-size: 2rem;
+    cursor: pointer;
+    padding-left: .875rem;
+}
+
+.nav__link:hover {
+    color: var(--base-color-white);
+}
+
+.nav__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+}
+
+.__main {
+    background-color: var(--base-color);
+}
+
+.show{
+    right : 0;
+}
+
+/* === home === */
+
+.home__image{
+    position : relative;
+}
+.home__image img{
+    position :absolute;
+    top: 0;
+    left: 0;
+}
