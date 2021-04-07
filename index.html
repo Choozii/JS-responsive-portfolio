@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +8,28 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Jiye Choo</title>
 </head>
+
 <body>
     <header class="__header">
-        <div class="nav" >
-        <div class="nav__open" id="nav-open">
-            <i class='bx bx-menu'></i>
-        </div>
-        <div class="nav__menu" id="nav-menu">
-            <div class="nav__close" id="nav-close">
-                <i class='bx bx-x'></i>
+        <div class="nav">
+            <div class="nav__open" id="nav-open">
+                <i class='bx bx-menu'></i>
             </div>
-           <ul class="nav__list">
-               <li class="nav__item"><a href="index.html" class="nav__link">HOME</a></li>
-               <li class="nav__item"><a href="about.html" class="nav__link">ABOUT</a></li>
-               <li class="nav__item"><a href="project.html" class="nav__link">PROJECT</a></li>
-               <li class="nav__item"><a href="contact.html" class="nav__link">CONTACT</a></li>
-            </ul>
+            <div class="nav__menu" id="nav-menu">
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">HOME</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">ABOUT</a></li>
+                    <li class="nav__item"><a href="#project" class="nav__link">PROJECT</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">CONTACT</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
     </header>
     <main class="__main">
-        <section class="home">
+        <section class="home" id="home">
             <div class="home__container">
                 <div class="home__image">
                     <img src="assets/images/background.png" alt="background white" class="move">
@@ -41,11 +43,141 @@
             </div>
         </section>
     </main>
+    <!-- ===== about page ===== -->
+    <section class="about" id="about">
+        <div class="introduce">
+            <div class="title">
+                <div class="icon">
+                    <i class='bx bx-happy'></i>
+                </div>
+                <div class="title__string">About Jiye</div>
+            </div>
+            <div class="introduce__content">
+                안녕하세요. 인간 컴퓨터 상호작용과 접근성에 관심이 많고, <br>웹, 특히 프론트 엔드에 관심이 많은 주니어 개발자입니다.
+            </div>
+        </div>
+        <div class="education">
+            <div class="title">
+                <div class="icon">
+                    <i class='bx bxs-graduation'></i>
+                </div>
+                <div class="title__string">Education</div>
+            </div>
+            <ul class="education__schools">
+                <li class="school">
+                    <div class="school__durataion">2016.03 ~ 2019.02</div>Ewha Womans University, Computer
+                    Science<br>이화여자대학교 컴퓨터공학과
+                </li>
+                <li class="school">
+                    <div class="school__durataion">2014.03 ~ 2016.02</div>kyungpook national university, Architectural
+                    Engineering<br>경북대학교 건축공학과
+                </li>
+            </ul>
+        </div>
+        <div class="tech">
+            <div class="title">
+                <div class="icon">
+                    <i class='bx bxs-medal'></i>
+                </div>
+                <div class="title__string">Key Expertise</div>
+            </div>
+            <ul class="tech__list">
+                <li class="tech__item">
+                    <div class="tech__item__subtitle">▶ Programming Language</div>Java, C, Javascript (ES6)
+                </li>
+                <li class="tech__item">
+                    <div class="tech__item__subtitle">▶ Frontend</div>React(with Functional, Hooks), Redux, mobX, HTML,
+                    CSS
+                </li>
+                <li class="tech__item">
+                    <div class="tech__item__subtitle">▶ Mobile</div>Android Application (with Java)
+                </li>
+                <li class="tech__item">
+                    <div class="tech__item__subtitle">▶ Server</div>Node.js, MongoDB, Oracle
+                </li>
+                <li class="tech__item">
+                    <div class="tech__item__subtitle">▶ Etc</div>git, SQL
+                </li>
+            </ul>
+        </div>
+
+    </section>
+    <section id="project" class="project">
+
+        <ul class="project list">
+            <li class="project__item">
+                **LMS**
+
+                Learning Management System 웹 사이트 개발
+
+                - **what I did**
+                수업 커리큘럼 페이지 풀스택 개발
+                과제 레포트 페이지 풀스택 개발
+                - **Tech Stack**
+                React, mobX, styled components
+                Tibero(DB), ProObject(Java application Framework)
+            </li>
+            <li class="project__item">
+                **xAPI Logger**
+
+                사용자 학습 경험 로그 수집을 위한 LMS용 로거 라이브러리 개발
+
+                - **what I did**
+                로그 수집을 위한 프론트 메소드 설계/구현
+                수집한 로그를 저장하기 위한 백엔드 서비스 구현
+                DB 구조 설계
+                - **Tech Stack**
+                React
+                Tibero(DB), ProObject(Java application Framework)
+            </li>
+            <li class="project__item">
+                **Research Paper on Mobile Accessibility**
+
+                시각장애인 온라인 쇼핑 경험 증진을 위한 모바일 어플리케이션의 구현
+
+                - Awards
+                2018 현대오토에버 장애인 앱개발 콘테스트 최종 선발
+                2018 이화여대 컴퓨터공학과 디자인 프로젝트 장려상
+                2019 HCI Korea 기술 부분 우수논문
+            </li>
+            <li class="project__item">
+                **ToDoList**
+
+                투두리스트 프론트/백엔드 구현 ****
+
+                - Tech stack
+                React, Redux, Sass
+                nodejs, Express, mongoDB
+            </li>
+            <li class="project__item">
+                **Responsive website Frontend**
+
+                반응형 웹 사이트 구현
+
+                - Tech stack
+                Vanilla JS, CSS, HTML
+            </li>
+        </ul>
+
+
+    </section>
+    <section id="contact" class="contact">
+        <div class="contacts">
+            <div class="contacts__icons">
+                <div class="contact__item" id="github">
+                    <div class="icon"><i class='bx bxl-github'></i> </div>
+                </div>
+                <div class="contact__item" id="mail">
+                    <div class="icon"><i class='bx bx-mail-send'></i> </div>
+                </div>
+            </div>
+            <div class="contacts__string">Jiye Choo<br>
+                https://github.com/Choozii<br>
+                jiyechoo@gmail.com <br> 010.4012.3903</div>
+        </div>
+        </div>
+    </section>
     <!-- import gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
-
-        <!-- <i class='bx bxl-github' ></i> -->
-        <!-- <i class='bx bx-mail-send' ></i> -->
-        

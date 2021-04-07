@@ -9,6 +9,10 @@ close.addEventListener('click', ()=>{
 open.addEventListener('click', ()=>{
     navMenu.classList.toggle('show');
 })
+const navItems = document.querySelectorAll('.nav__item');
+navItems.forEach(item=> item.addEventListener('click', ()=>{
+    navMenu.classList.toggle('show');
+}))
 
 const contactButton = document.getElementById('contactBtn');
 contactButton.addEventListener('click', ()=>{

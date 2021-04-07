@@ -9,7 +9,7 @@
     --header-height: 3rem;
     /* === colors === */
     --base-color: #036bfc;
-    --base-color-darker: #0d4ea8;
+    --base-color-darker: #144c99;
     --base-color-darkest: #022e6b;
     --base-color-white: #FCF8F8;
 
@@ -194,6 +194,84 @@ img {
     text-shadow: -1px -1px 0 #000000;
 }
 
+/* ===== about ===== */
+.about{
+    
+    background-color: var(--base-color);
+    color: var(--base-color-white);
+    padding: 3.5rem 1.5rem;
+}
+.introduce,
+.education,
+.tech{
+    margin-bottom: 4rem;
+}
+.title{
+    display:flex;
+    text-align: center;
+}
+.title__string{
+    font-weight: 600;
+    padding-left: .3rem;
+}
+.introduce__content,
+.education__schools,
+.tech__item{
+    font-size:var(--small-font-size);
+    padding-left: 2rem;
+    padding-top: 1.5rem;
+}
+.school{
+    margin-bottom: 1rem;
+}
+.school:last-child{
+    margin-bottom: 0;
+}
+
+.school__durataion{
+    color:#dadbdb;
+    font-style: italic;
+}
+
+.tech__item__subtitle{
+    color:var(--base-color-darker);    
+    font-weight: 600;
+    padding-bottom: .5rem;
+}
+/* ===== project ===== */
+.project{
+    background-color: var(--base-color);
+    color: var(--base-color-white);
+    height: calc(100vh - var(--header-height));
+    padding: 3.5rem 1.5rem;
+    overflow:scroll;
+    font-size: var(--small-font-size);
+}
+.project__item{
+    padding-top: 2rem;
+}
+/* ===== contact ===== */
+.contact{
+    background-color: var(--base-color);
+    color: var(--base-color-white);
+    height: calc(100vh - var(--header-height));
+    padding: 3.5rem 1.5rem;
+}
+.contacts{
+    display:flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items: center;
+}
+.contacts__icons{
+    display: flex;
+}
+.contact__item{
+   font-size: var(--big-font-size);
+}
+.contacts__string{
+    font-size : var(--small-font-size);
+}
 /* ===== MEDIA QUERIES ===== */
 @media screen and (min-width : 768px){
     body{
