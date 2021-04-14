@@ -14,12 +14,6 @@ navItems.forEach(item=> item.addEventListener('click', ()=>{
     navMenu.classList.toggle('show');
 }))
 
-const contactButton = document.getElementById('contactBtn');
-contactButton.addEventListener('click', ()=>{
-   let mailto = `mailto:jiyechoo@gmail.com?subject=${""}&body=${""}`;
-   window.open(mailto, 'emailWindow');
-})
-
 /*=== animation effect ===*/
 
 gsap.from('.nav__open', {opacity : 0, duration : 1, delay:2, y:10})

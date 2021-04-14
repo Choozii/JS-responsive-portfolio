@@ -17,8 +17,7 @@
     --body-font: 'Nanum Gothic', sans-serif;
     --big-font-size: 2.5rem;
     --normal-font-size: 1.5rem;
-    --small-font-size: .938rem;
-
+    --small-font-size: 0.938rem;
     /* === z-index === */
     --z-fixed: 100;
 }
@@ -26,8 +25,9 @@
 @media screen and (min-width : 768px) {
     :root {
         --big-font-size: 5rem;
-        --normal-font-size: 2rem;
-        --small-font-size: 1.5rem;
+        --normal-font-size: 1.8rem;
+        --small-font-size: 1.2rem;
+        --smallest-font-size: .938rem;;
     }
 }
 
@@ -44,6 +44,7 @@ body {
     font-size: var(--normal-font-size);
     font-weight: 500;
     padding: 0;
+    user-select: none;
 }
 
 h1,
@@ -82,7 +83,6 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: white 2px solid;
 }
 
 .nav__open,
@@ -167,6 +167,7 @@ img {
     font-size: var(--big-font-size);
     line-height: 1.3;
     margin-bottom: 1rem;
+
 }
 
 .home__description {
@@ -201,6 +202,7 @@ img {
     color: var(--base-color-white);
     padding: 3.5rem 1.5rem;
 }
+
 .introduce,
 .education,
 .tech{
@@ -212,6 +214,7 @@ img {
 }
 .title__string{
     font-weight: 600;
+    font-size: var(--normal-font-size);
     padding-left: .3rem;
 }
 .introduce__content,
@@ -229,14 +232,23 @@ img {
 }
 
 .school__durataion{
-    color:#dadbdb;
     font-style: italic;
+    padding-bottom: .3rem;
+    font-size : var(--smallest-font-size);
 }
 
-.tech__item__subtitle{
-    color:var(--base-color-darker);    
+.tech__item__subtitle{ 
     font-weight: 600;
     padding-bottom: .5rem;
+}
+.tech__content{
+    padding-left : 1rem;
+    font-size : var(--small-font-size);
+    padding-top : .3rem;
+}
+.tech__list{
+    display : flex;
+    flex-direction: column;
 }
 /* ===== project ===== */
 .project{
@@ -244,7 +256,6 @@ img {
     color: var(--base-color-white);
     height: calc(100vh - var(--header-height));
     padding: 3.5rem 1.5rem;
-    overflow:scroll;
     font-size: var(--small-font-size);
 }
 .project__item{
@@ -295,22 +306,39 @@ img {
     }
     .nav__item{
         margin-left: 3rem;
-        margin-bottom: 0;
+        margin-bottom: 0;    
+    }
+    .nav__link{
+        font-weight: 600;
+    }
+    .nav__link:hover{
+        color :var(--base-color-darker);
+    }
+    .nav__link:active{
+        color :var(--base-color-darkest);
     }
     .nav__item:first-child{
         margin-left: 0rem;
         margin-bottom: 0;
     }
+    .home__image{
+        margin:0;
+        margin-bottom: 10rem;
+    }
     .home__container{
         height : 100vh;
+        display : flex;
+        flex-flow : row-reverse;
         align-items: center;
         justify-content: center;
     }
-    .home__image{
-        width : 421px;
-        height: 421px;
+
+/* ===== about page ===== */
+    .about__wrapper{
+        display : flex;
+        justify-content: space-around;
     }
-    .home__img img{
-        width : 421px;
-    }      
+    .tech__list{
+        flex-direction: row;
+    }
 }
