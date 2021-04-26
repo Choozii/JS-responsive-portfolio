@@ -23,13 +23,12 @@
                     <li class="nav__item"><a href="#home" class="nav__link">HOME</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">ABOUT</a></li>
                     <li class="nav__item"><a href="#project" class="nav__link">PROJECT</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">CONTACT</a></li>
                 </ul>
             </div>
         </div>
     </header>
     <main class="__main">
-        <section class="home" id="home">
+        <section class="scene home" id="home">
             <div class="home__container">
                 <div class="home__image">
                     <img src="assets/images/background.png" alt="background white" class="move">
@@ -38,28 +37,41 @@
                 <div class="home__strings">
                     <h1 class="home__title">Hi, I'm Jiye</h1>
                     <p class="home__description">Frontend developer</p>
-                    <a href="#contact" class="home__button" id="contactBtn">contact</a>
+                    <div class="contacts">
+            <div class="contacts__icons">
+                <div class="contact__item" id="github">
+                    <div class="icon"><i class='bx bxl-github'></i> </div>
+                </div>
+                <div class="contact__item" id="mail">
+                    <div class="icon"><i class='bx bx-mail-send'></i> </div>
+                </div>
+            </div>
+        </div>
+        </div>
                 </div>
             </div>
         </section>
     </main>
     <!-- ===== about page ===== -->
-    <section class="about" id="about">
+    <section class="scene about" id="about">
     <div class="about__wrapper">
     <div>
         <div class="introduce">
             <div class="title">
-                <div class="title__string">Hi, I'm Jiye</div>
+                <div class="title__string">🌱 Hi, I'm Jiye</div>
             </div>
             <div class="introduce__content">
-                안녕하세요. <br/>
-                주니어 프론트 엔드 개발자 추지예입니다.<br/>
-                지금은 반응형 웹 사이트 공부 중입니다
+                안녕하세요! <br/>
+                많은 것을 배워 나가고 싶은 열정이 가득한 주니어 개발자 추지예입니다! <br/><br/>
+                프론트엔드 개발을 진행하며 효율적인 페이지와 기능들을 만들기 위해 노력하고 있습니다. <br/>
+                또한 단순 기능 구현 뿐만 아니라 프로젝트원들과의 소통과 규칙, 클린한 코드 등의 중요성을 몸소 깨닫고 <br/>
+                코드 가독성, 프로젝트 구조 등 협업을 위한 부분을 조금씩 배워나가고 있는 주니어 개발자입니다 ☺️
             </div>
         </div>
+        <hr/>
         <div class="education">
             <div class="title">
-                <div class="title__string">Education</div>
+                <div class="title__string">✏️ Education</div>
             </div>
             <ul class="education__schools">
                 <li class="school">
@@ -70,131 +82,51 @@
                 </li>
             </ul>
         </div>
-        </div>
+        <hr/>
         <div class="tech">
             <div class="title">
-                <div class="title__string">Skills</div>
+                <div class="title__string">🖥️ Skills</div>
             </div>
             <ul class="tech__list">
             <div class="l__tech__list">
                 <li class="tech__item">
-                    <div class="tech__item__subtitle">-Language</div>
+                    <div class="tech__item__subtitle">Language</div>
                     <div class='tech__content'>
-                    Java<br/> 
-                    C<br/> 
-                    Javascript<br/>
+                    Java, C, Javascript<br/>
                     </div>
                 </li>
                 <li class="tech__item">
-                    <div class="tech__item__subtitle">-Frontend</div>
+                    <div class="tech__item__subtitle">Frontend</div>
                      <div class='tech__content'>
-                    React<br/>
-                     Redux<br/>
-                     mobX<br/>
-                    HTML<br/>
-                    CSS<br/>
+                    React, Redux, mobX, HTML, CSS
                     </div>
                 </li>
                 </div>
                 <div class="l__tech__list">
                 <li class="tech__item">
-                    <div class="tech__item__subtitle">-Mobile</div>
-                     <div class='tech__content'>
-                    Android<br/>
-                    </div>
-                </li>
-                <li class="tech__item">
-                    <div class="tech__item__subtitle">-Server</div>
+                    <div class="tech__item__subtitle">Server</div>
                     <div class='tech__content'>
-                    Node.js<br/>MongoDB<br/> Oracle<br/>
+                    Node.js, MongoDB, Oracle<br/>
                     </div>
                 </li>
                 <li class="tech__item">
-                    <div class="tech__item__subtitle">-Etc</div>
+                    <div class="tech__item__subtitle">Etc</div>
                      <div class='tech__content'>
-                    git<br/>SQL<br/>
+                    Android, git, SQL<br/>
                     </div>
                 </li>
                 </div>
             </ul>
         </div>
+                <div>
     </div>
     </section>
-    <section id="project" class="project">
+    <section id="project" class="project scene">
 
-        <ul class="project list">
-            <li class="project__item">
-                **LMS**
-
-                Learning Management System 웹 사이트 개발
-
-                - **what I did**
-                수업 커리큘럼 페이지 풀스택 개발
-                과제 레포트 페이지 풀스택 개발
-                - **Tech Stack**
-                React, mobX, styled components
-                Tibero(DB), ProObject(Java application Framework)
-            </li>
-            <li class="project__item">
-                **xAPI Logger**
-
-                사용자 학습 경험 로그 수집을 위한 LMS용 로거 라이브러리 개발
-
-                - **what I did**
-                로그 수집을 위한 프론트 메소드 설계/구현
-                수집한 로그를 저장하기 위한 백엔드 서비스 구현
-                DB 구조 설계
-                - **Tech Stack**
-                React
-                Tibero(DB), ProObject(Java application Framework)
-            </li>
-            <li class="project__item">
-                **Research Paper on Mobile Accessibility**
-
-                시각장애인 온라인 쇼핑 경험 증진을 위한 모바일 어플리케이션의 구현
-
-                - Awards
-                2018 현대오토에버 장애인 앱개발 콘테스트 최종 선발
-                2018 이화여대 컴퓨터공학과 디자인 프로젝트 장려상
-                2019 HCI Korea 기술 부분 우수논문
-            </li>
-            <li class="project__item">
-                **ToDoList**
-
-                투두리스트 프론트/백엔드 구현 ****
-
-                - Tech stack
-                React, Redux, Sass
-                nodejs, Express, mongoDB
-            </li>
-            <li class="project__item">
-                **Responsive website Frontend**
-
-                반응형 웹 사이트 구현
-
-                - Tech stack
-                Vanilla JS, CSS, HTML
-            </li>
-        </ul>
-
+       dsdlskdlsk
 
     </section>
-    <section id="contact" class="contact">
-        <div class="contacts">
-            <div class="contacts__icons">
-                <div class="contact__item" id="github">
-                    <div class="icon"><i class='bx bxl-github'></i> </div>
-                </div>
-                <div class="contact__item" id="mail">
-                    <div class="icon"><i class='bx bx-mail-send'></i> </div>
-                </div>
-            </div>
-            <div class="contacts__string">Jiye Choo<br>
-                https://github.com/Choozii<br>
-                jiyechoo@gmail.com <br> 010.4012.3903</div>
-        </div>
-        </div>
-    </section>
+
     <!-- import gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="assets/js/index.js"></script>
