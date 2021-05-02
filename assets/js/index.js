@@ -30,20 +30,49 @@ project_RickAndMorty.addEventListener('click',()=>{
     window.open('https://github.com/Choozii/RickAndMortyDex','_blank');
 })
 
+project_RickAndMorty.addEventListener('mouseover',()=>{
+    document.querySelector('#project_RickAndMorty_description').classList.toggle('show_desciption');
+})
+project_RickAndMorty.addEventListener('mouseout',()=>{
+    document.querySelector('#project_RickAndMorty_description').classList.toggle('show_desciption');
+})
+
 const project_TodoList = document.querySelector('#project_TodoList');
 project_TodoList.addEventListener('click',()=>{
     window.open('https://github.com/Choozii/TodoList','_blank');
 })
-/*=== animation effect ===*/
 
-gsap.from('.nav__open', {opacity : 0, duration : 1, delay:2, y:10})
-gsap.from('.nav__item', {opacity : 0, duration : 1, delay : 2.1, y: 30, stagger : 0.2})
+project_TodoList.addEventListener('mouseover',()=>{
+    document.querySelector('#project_TodoList_description').classList.toggle('show_desciption');
+})
+project_TodoList.addEventListener('mouseout',()=>{
+    document.querySelector('#project_TodoList_description').classList.toggle('show_desciption');
+})
 
-gsap.from('.home__title', {opacity : 0, duration : 1, delay : 1.6, y: 30})
-gsap.from('.home__description', {opacity : 0, duration : 1, delay : 1.8, y: 30})
-gsap.from('.home__button', {opacity : 0, duration : 1, delay : 2.1, y: 30})
-gsap.from('.home__image', {opacity : 0, duration : 1, delay : 1.3, y: 30})
-//gsap.from('.contacts__icons', {opacity : 0, duration : 1, delay : 1.8, y: 30})
+const project_LMS = document.querySelector('#project_LMS');
 
-const header = document.querySelector("#home");
-const headerHeight = header.getBoundingClientRect().height;
+project_LMS.addEventListener('mouseover',()=>{
+    document.querySelector('#project_LMS_description').classList.toggle('show_desciption');
+})
+project_LMS.addEventListener('mouseout',()=>{
+    document.querySelector('#project_LMS_description').classList.toggle('show_desciption');
+})
+
+/* ===== scroll revel animation =====*/
+const sr = ScrollReveal({
+    origin :'top',
+    distance : '80px',
+    duration : 2000,
+    reset : true
+})
+//home
+sr.reveal('.home__title',{delay:200});
+sr.reveal('.home__description',{delay:200});
+sr.reveal('.home__image',{delay:200});
+//about
+sr.reveal('.about .title',{delay:200});
+sr.reveal('.about .content',{delay : 300});
+//project
+sr.reveal('.project_img',{delay:200});
+//contact
+sr.reveal('.contact__container',{delay:200});
