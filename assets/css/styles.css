@@ -14,12 +14,13 @@
     --base-color-white: #FCF8F8;
 
     /* === font === */
-    --body-font: 'Nanum Gothic', sans-serif;
+    --body-font: 'Nanum Gothic', sans-serf;
     --big-font-size: 2.5rem;
     --normal-font-size: 1.5rem;
     --small-font-size: 0.938rem;
     /* === z-index === */
     --z-fixed: 100;
+    
 }
 
 @media screen and (min-width : 768px) {
@@ -39,6 +40,7 @@
 }
 
 body {
+    background: linear-gradient( var(--base-color), rgb(196, 169, 218));
     margin: var(--header-height) 0 0 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
@@ -47,6 +49,12 @@ body {
     user-select: none;
 }
 
+main{
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+}
 h1,
 p,
 ul {
@@ -74,11 +82,26 @@ img {
 .__header {
     width: 100%;
     position: fixed;
+    background-color: rgba(238, 214, 250, 0.1);
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: var(--base-color);
 }
+
+.bd-grid{
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    width: calc(100% - 2rem);
+  }
+
+  .section{
+    height : clac(100vh - var(--header-height));
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    overflow:hidden;
+  }
 
 /* === NAV === */
 .nav {
@@ -91,7 +114,7 @@ img {
 .nav__open,
 .nav__close,
 .nav__link {
-    color: var(--base-color-white);
+    color : black;
 }
 
 @media screen and (max-width :768px) {
@@ -102,7 +125,6 @@ img {
         width: 50%;
         height: 100%;
         padding: 3.5rem 1.5rem 0;
-        background-color: rgba(3, 107, 252, .4);
         backdrop-filter: blur(10px);
         transition: .5s;
     }
@@ -135,7 +157,6 @@ img {
 
 /* === home === */
 .home {
-    background-color: var(--base-color);
     overflow: hidden;
 }
 
@@ -147,8 +168,6 @@ img {
 
 .home__image {
     position: relative;
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
     justify-self: center;
     width: 302px;
     margin: auto;
@@ -170,7 +189,6 @@ img {
     font-size: var(--big-font-size);
     line-height: 1.3;
     margin-bottom: 1rem;
-
 }
 
 .home__description {
@@ -200,8 +218,6 @@ img {
 
 /* ===== about ===== */
 .about{
-    
-    background-color: var(--base-color);
     color: var(--base-color-white);
     padding: 3.5rem 1.5rem;
 }
@@ -255,37 +271,68 @@ img {
 }
 /* ===== project ===== */
 .project{
-    background-color: var(--base-color);
     color: var(--base-color-white);
+    text-align: center;
     height: calc(100vh - var(--header-height));
     padding: 3.5rem 1.5rem;
     font-size: var(--small-font-size);
 }
-.project__item{
-    padding-top: 2rem;
+.project__container{
+    display: flex;
+    flex-flow: wrap;
+}
+.project_img{
+    box-shadow: 0 25px 25px rgba(14, 36, 49, .15);
+    width : 300px;
+    height : 300px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.project_img img{
+    transition : 1s;
+    cursor: pointer;
+}   
+.project_img img:hover{
+    transform:scale(1.1);
 }
 /* ===== contact ===== */
-.contact{
-    background-color: var(--base-color);
-    color: var(--base-color-white);
-    height: calc(100vh - var(--header-height));
-    padding: 3.5rem 1.5rem;
-}
-.contacts{
-    display:flex;
-    flex-direction : column;
+.contact__container{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.contacts__icons{
-    display: flex;
-}
-.contact__item{
-   font-size: var(--big-font-size);
-}
-.contacts__string{
-    font-size : var(--small-font-size);
-}
+.contact__input{
+    width: 100%;
+    font-size: var(--small-font-size);
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 0;
+    outline: none;
+    margin-bottom: 10px;
+  }
+  .contact__form{
+      width : 70%;
+  }
+  .contact__button{
+    display: block;
+    border: none;
+    padding : .5rem 1rem .5rem 1rem;
+    border-radius: 10px;
+    outline: none;
+    color:var(--base-color-white);
+    background-color: var(--base-color-darker);
+    font-size: var(--small-font-size);
+    cursor: pointer;
+  }
+  .contact__item{
+    display : flex;
+    cursor:pointer;
+    width : 50px;
+    flex-direction: row;
+    color : var(--base-color-white);
+  }
+
 /* ===== MEDIA QUERIES ===== */
 @media screen and (min-width : 768px){
     body{
